@@ -15,11 +15,12 @@ $('element').CountUpCircle();
 $('#count-box').CountUpCircle({
   duration: 2000 /* Integer - Unit: Millisecounds; How long to Count; Default value: 5000  */,
   opacity_anim: true /* Boolean; Raise the Opacity of the element from 0 to 100%; Default: false */
+  step_divider: 1 /* setp forward in bigger steps, for example for bigger numbers like >1000 */
 });
 ```
 
-# Example
-This the example, which is available in the demo folder.
+# Examples
+This is a simple example, which is available in the demo folder.
 
 ```html
 <div class="wrapper">
@@ -29,6 +30,22 @@ This the example, which is available in the demo folder.
 ```javascript
 $('#count-box').CountUpCircle({
   duration: 2000,
-  opacity_anim: true
+  opacity_anim: true,
+  step_divider: 1
+});
+```
+
+## Big number example
+
+```html
+<div class="wrapper">
+  <div id="count-box">819757</div> 
+</div>
+```
+```javascript
+$('#count-box').CountUpCircle({
+  duration: 4000,
+  opacity_anim: false,
+  step_divider: 3000
 });
 ```

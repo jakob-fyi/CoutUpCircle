@@ -19,18 +19,14 @@
 		}, options);
 
 		var toCount = parseInt(this.html());
-		console.log("Count up to: " + toCount);
 
 		var i 	 		 = 0;
 		var step 		 = settings.duration / (toCount / settings.step_divider);
 		var procent_step = 1/(toCount / settings.step_divider);
-		console.log("Step duration: " + step+"ms");
-
 		var displayNumber = function() {
 			i=i+settings.step_divider;
 			self.html(i);
 			if (settings.opacity_anim){
-				console.log("animate opacity");
 				self.css({'opacity':procent_step*i});
 			}
 			if (i < toCount - settings.step_divider) {
